@@ -6,7 +6,7 @@ import { Logo } from "@/components/ui/logo";
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
-    <footer className="border-t border-white/8 bg-midnight-deep">
+    <footer className="border-t border-white/8 bg-transparent">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo locale={locale} />

@@ -189,6 +189,11 @@ const en = {
       "The quiet work is becoming visible.",
       "I kept the promise I made to myself.",
     ],
+    slides: [
+      { title: "Whisper to Moonlight", caption: "Write what you've already manifested." },
+      { title: "Share your whisper", caption: "Turn a private moment into a card — only if you choose." },
+      { title: "Keep it yours", caption: "Save it, send it, or leave it in Created by you." },
+    ],
   },
   sharing: {
     headline: "Make your manifestation yours. Share it when you're ready.",

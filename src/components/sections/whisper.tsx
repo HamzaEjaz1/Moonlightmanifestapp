@@ -4,7 +4,7 @@ import { FormEvent, useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Dictionary } from "@/i18n/en";
 import { screens } from "@/lib/site";
-import { PhoneMockup } from "@/components/ui/phone-mockup";
+import { PhoneSlider } from "@/components/ui/phone-slider";
 import { Reveal } from "@/components/motion/reveal";
 
 const LIMIT = 1500;
@@ -29,6 +29,12 @@ export function Whisper({ dict }: { dict: Dictionary }) {
     [],
   );
 
+  const slides = [
+    { src: screens.whisper, title: dict.whisper.slides[0].title, caption: dict.whisper.slides[0].caption },
+    { src: screens.shareWhisper, title: dict.whisper.slides[1].title, caption: dict.whisper.slides[1].caption },
+    { src: screens.shareStory, title: dict.whisper.slides[2].title, caption: dict.whisper.slides[2].caption },
+  ];
+
   function onSubmit(event: FormEvent) {
     event.preventDefault();
     if (!canPost) return;
@@ -40,8 +46,24 @@ export function Whisper({ dict }: { dict: Dictionary }) {
   return (
     <section id="whisper" className="relative overflow-hidden px-5 py-28">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute start-1/2 top-24 h-64 w-64 -translate-x-1/2 rounded-full bg-violet/10 blur-3xl rtl:translate-x-1/2" />
+        <motion.div
+          className="orb absolute end-[8%] top-24 h-56 w-56 rounded-full opacity-40"
+          animate={reduce ? undefined : { y: [0, 16, 0], scale: [1, 1.06, 1] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <span className="ripple absolute end-[12%] top-40 h-72 w-72" />
+        <span className="ripple absolute end-[18%] top-48 h-48 w-48 [animation-delay:2s]" />
+        {Array.from({ length: 10 }, (_, i) => (
+          <motion.span
+            key={i}
+            className="absolute h-1 w-1 rounded-full bg-lavender/80"
+            style={{ left: `${12 + i * 8}%`, top: `${18 + ((i * 13) % 60)}%` }}
+            animate={reduce ? undefined : { opacity: [0.15, 0.8, 0.15], y: [0, -14, 0] }}
+            transition={{ duration: 4 + (i % 3), repeat: Infinity, delay: i * 0.25 }}
+          />
+        ))}
       </div>
+
       <div className="relative mx-auto max-w-6xl">
         <Reveal>
           <p className="mb-3 text-center text-xs font-medium uppercase tracking-[0.22em] text-lavender/80">
@@ -55,7 +77,7 @@ export function Whisper({ dict }: { dict: Dictionary }) {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="mt-16 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <Reveal>
             <form onSubmit={onSubmit} className="rounded-[2rem] border border-white/8 bg-white/[0.03] p-6 sm:p-8">
               <p className="text-sm text-muted">{dict.whisper.prompt}</p>
@@ -106,10 +128,20 @@ export function Whisper({ dict }: { dict: Dictionary }) {
                 )}
               </AnimatePresence>
               <p className="font-serif text-2xl text-ink">{dict.whisper.created}</p>
-              <div className="mt-4 space-y-3">
+              <div className="mt-4 flex gap-3 overflow-x-auto pb-2">
                 <AnimatePresence initial={false}>
                   {posted.length === 0 ? (
-                    <p className="text-sm text-muted">{dict.whisper.empty}</p>
+                    samples.map((sample, i) => (
+                      <motion.article
+                        key={sample}
+                        initial={reduce ? false : { opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.08 }}
+                        className="min-w-[220px] flex-1 rounded-2xl border border-white/8 bg-white/[0.04] p-4"
+                      >
+                        <p className="text-sm leading-6 text-ink">{sample}</p>
+                      </motion.article>
+                    ))
                   ) : (
                     posted.map((item) => (
                       <motion.article
@@ -117,7 +149,7 @@ export function Whisper({ dict }: { dict: Dictionary }) {
                         layout
                         initial={reduce ? false : { opacity: 0, y: 16, scale: 0.98 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-                        className="rounded-2xl border border-white/8 bg-white/[0.04] p-4"
+                        className="min-w-[220px] flex-1 rounded-2xl border border-lavender/20 bg-white/[0.05] p-4"
                       >
                         <p className="text-sm leading-6 text-ink">{item.text}</p>
                         <p className="mt-3 text-xs text-muted">{item.date}</p>
@@ -129,27 +161,23 @@ export function Whisper({ dict }: { dict: Dictionary }) {
             </div>
           </Reveal>
 
-          <div className="relative mx-auto w-full max-w-[340px]">
-            {samples.map((sample, i) => (
-              <motion.p
-                key={sample}
-                className={`absolute hidden max-w-[190px] rounded-2xl border border-white/10 bg-[#0b0816]/80 px-4 py-3 text-sm text-ink backdrop-blur sm:block ${
-                  i === 0 ? "-start-8 top-16" : i === 1 ? "-end-10 top-40" : "-start-4 bottom-24"
-                }`}
-                animate={reduce ? undefined : { y: [0, i % 2 === 0 ? -8 : 8, 0] }}
-                transition={{ duration: 6 + i, repeat: Infinity, ease: "easeInOut" }}
-              >
-                {sample}
-              </motion.p>
-            ))}
-            <motion.div
-              className="relative"
-              animate={reduce ? undefined : { y: [0, -10, 0] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <PhoneMockup src={screens.whisper} alt={dict.whisper.headline} />
-            </motion.div>
-          </div>
+          <Reveal delay={0.1}>
+            <div className="relative">
+              {samples.map((sample, i) => (
+                <motion.p
+                  key={sample}
+                  className={`absolute z-10 hidden max-w-[180px] rounded-2xl border border-white/10 bg-[#0b0816]/80 px-4 py-3 text-sm text-ink backdrop-blur lg:block ${
+                    i === 0 ? "-start-6 top-10" : i === 1 ? "-end-4 top-1/2" : "start-0 bottom-28"
+                  }`}
+                  animate={reduce ? undefined : { y: [0, i % 2 === 0 ? -10 : 10, 0] }}
+                  transition={{ duration: 6 + i, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  {sample}
+                </motion.p>
+              ))}
+              <PhoneSlider slides={slides} />
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

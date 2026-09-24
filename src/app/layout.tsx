@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${serif.variable} ${sans.variable} ${arabic.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="grain min-h-full bg-midnight text-ink">{children}</body>
+      <body className="grain min-h-full text-ink">{children}</body>
     </html>
   );
 }

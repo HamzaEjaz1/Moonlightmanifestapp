@@ -7,7 +7,7 @@ export function AmbientField() {
 
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(155,126,232,0.16),transparent_42%),radial-gradient(circle_at_90%_20%,rgba(216,200,245,0.08),transparent_28%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-5%,rgba(216,200,245,0.2),transparent_46%),radial-gradient(ellipse_at_90%_30%,rgba(155,126,232,0.16),transparent_40%),radial-gradient(ellipse_at_8%_80%,rgba(91,58,168,0.22),transparent_42%)]" />
       <motion.div
         className="orb absolute left-1/2 top-[-8rem] h-[26rem] w-[26rem] -translate-x-1/2 rounded-full opacity-50"
         animate={reduce ? undefined : { y: [0, 18, 0], scale: [1, 1.04, 1] }}

@@ -191,6 +191,11 @@ const id: Dictionary = {
       "Kerja yang sunyi mulai terlihat.",
       "Aku menepati janji pada diriku sendiri.",
     ],
+    slides: [
+      { title: "Whisper to Moonlight", caption: "Tulis apa yang sudah kamu manifestasikan." },
+      { title: "Bagikan whisper-mu", caption: "Ubah momen pribadi jadi kartu — hanya jika kamu memilih." },
+      { title: "Tetap milikmu", caption: "Simpan, kirim, atau biarkan di Created by you." },
+    ],
   },
   sharing: {
     headline: "Jadikan manifestasimu milikmu. Bagikan saat kamu siap.",

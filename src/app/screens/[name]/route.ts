@@ -27,7 +27,7 @@ const files: Record<string, string> = {
   "affirmation-solid.jpg":
     "c__Users_shahb_AppData_Roaming_Cursor_User_workspaceStorage_dbc20ab52bd1c604b45da9f13fa5b988_images_affi-0ede5700-90ac-4ef5-a548-073b6dfb0925.jpg",
   "whisper.jpg":
-    "c__Users_shahb_AppData_Roaming_Cursor_User_workspaceStorage_dbc20ab52bd1c604b45da9f13fa5b988_images_whistper-ee1c6f7f-cec9-44ac-8a18-c6b59d5352ec.jpg",
+    "c__Users_shahb_AppData_Roaming_Cursor_User_workspaceStorage_dbc20ab52bd1c604b45da9f13fa5b988_images_whistper-ffb109b5-aaa5-4d3a-8e8e-cde8cc1f7dc9.jpg",
 };
 
 export async function GET(
