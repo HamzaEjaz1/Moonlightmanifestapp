@@ -53,6 +53,10 @@ export const metadata: Metadata = {
     description:
       "Personalized manifestation stories and affirmations, narrated in a voice that feels right for you.",
   },
+  icons: {
+    icon: [{ url: "/icon", type: "image/png" }],
+    apple: [{ url: "/apple-icon", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
