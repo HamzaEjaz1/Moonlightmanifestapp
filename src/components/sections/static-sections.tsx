@@ -131,17 +131,15 @@ export function PrivacyBand({ locale, dict }: { locale: Locale; dict: Dictionary
 }
 
 export function HowItWorks({ dict }: { dict: Dictionary }) {
-  const shots = [screens.home, screens.creating, screens.player];
   return (
-    <section id="how" className="px-5 py-24">
-      <div className="mx-auto max-w-6xl">
+    <section id="how" className="px-5 py-20">
+      <div className="mx-auto max-w-5xl">
         <SectionHeading title={dict.how.headline} />
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {dict.how.steps.map((step, i) => (
-            <article key={step.title}>
-              <PhoneMockup src={shots[i]} alt={step.title} />
-              <p className="mt-5 text-xs uppercase tracking-[0.2em] text-lavender">0{i + 1}</p>
-              <h3 className="mt-2 font-serif text-2xl text-ink">{step.title}</h3>
+            <article key={step.title} className="rounded-3xl border border-white/8 bg-white/[0.03] p-6">
+              <p className="text-xs uppercase tracking-[0.2em] text-lavender">0{i + 1}</p>
+              <h3 className="mt-3 font-serif text-2xl text-ink">{step.title}</h3>
               <p className="mt-2 text-sm text-muted">{step.body}</p>
             </article>
           ))}
@@ -182,16 +180,16 @@ export function Showcase({ dict }: { dict: Dictionary }) {
 
 export function Testimonials({ dict }: { dict: Dictionary }) {
   return (
-    <section className="px-5 py-24">
+    <section id="testimonials" className="px-5 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionHeading title={dict.testimonials.headline} body={dict.testimonials.body} />
         <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {[0, 1, 2].map((i) => (
-            <blockquote key={i} className="rounded-3xl glass p-6">
-              <p className="font-serif text-xl text-muted">{dict.testimonials.placeholder}</p>
+          {dict.testimonials.items.map((item) => (
+            <blockquote key={item.quote} className="rounded-3xl border border-white/8 bg-white/[0.04] p-6">
+              <p className="font-serif text-xl leading-snug text-ink">{item.quote}</p>
               <footer className="mt-6 text-sm">
-                <p className="text-ink">{dict.testimonials.name}</p>
-                <p className="text-muted">{dict.testimonials.role}</p>
+                <p className="text-ink">{item.name}</p>
+                <p className="text-muted">{item.role}</p>
               </footer>
             </blockquote>
           ))}
@@ -203,35 +201,15 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
 
 export function Download({ dict }: { dict: Dictionary }) {
   return (
-    <section id="download" className="px-5 py-24">
-      <div className="mx-auto max-w-4xl rounded-[2rem] glass px-6 py-16 text-center sm:px-12">
+    <section id="download" className="px-5 py-20">
+      <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/8 bg-white/[0.03] px-6 py-16 text-center sm:px-12">
         <h2 className="font-serif text-4xl text-ink sm:text-5xl">{dict.download.headline}</h2>
         <p className="mx-auto mt-5 max-w-xl text-muted">{dict.download.body}</p>
         <div className="mt-8 flex justify-center">
           <StoreBadges appStore={dict.download.appStore} googlePlay={dict.download.googlePlay} />
         </div>
-        <div className="mt-10 flex justify-center gap-4">
-          <QrLabel label="App Store" hint={dict.download.qr} />
-          <QrLabel label="Google Play" hint={dict.download.qr} />
-        </div>
-        <p className="mt-6 text-xs text-muted">{dict.download.pending}</p>
       </div>
     </section>
-  );
-}
-
-function QrLabel({ label, hint }: { label: string; hint: string }) {
-  return (
-    <div className="w-36 text-center">
-      <div className="mx-auto grid h-28 w-28 place-items-center rounded-2xl bg-white p-2">
-        <svg viewBox="0 0 29 29" className="h-full w-full text-midnight" aria-hidden>
-          <rect width="29" height="29" fill="white" />
-          <path fill="currentColor" d="M1 1h8v8H1zm2 2v4h4V3zm13-2h8v8h-8zm2 2v4h4V3zM1 16h8v8H1zm2 2v4h4v-4zm18-2h4v2h-2v2h2v2h-4v2h6v-8h-2v2h-2v-2zm-8 0h2v2h-2zm4 2h2v2h-2zm-4 2h2v2h-2zm4 2h2v2h-2zm-6 2h2v2h-2zm4 0h4v2h-4z" />
-        </svg>
-      </div>
-      <p className="mt-2 text-xs text-muted">{label}</p>
-      <p className="text-[10px] text-muted">{hint}</p>
-    </div>
   );
 }
 

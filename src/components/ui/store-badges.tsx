@@ -13,7 +13,7 @@ export function StoreBadges({
   return (
     <div className="flex flex-wrap items-center gap-3">
       <StoreBadge href={appHref} label={appStore} store="App Store" />
-      <StoreBadge href={playHref} label={googlePlay} store="Google Play" />
+      {site.store.googlePlay ? <StoreBadge href={playHref} label={googlePlay} store="Google Play" /> : null}
     </div>
   );
 }
@@ -30,6 +30,8 @@ function StoreBadge({
   return (
     <a
       href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noreferrer" : undefined}
       className="inline-flex min-h-12 items-center gap-3 rounded-2xl border border-white/12 bg-black/40 px-4 py-2 text-start text-ink hover:bg-white/5"
     >
       {store === "App Store" ? <AppleIcon /> : <PlayIcon />}

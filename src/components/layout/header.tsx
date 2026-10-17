@@ -7,12 +7,12 @@ import type { Locale } from "@/i18n/config";
 import { Logo } from "@/components/ui/logo";
 import { LanguageSelect } from "@/components/ui/language-select";
 import { ButtonLink } from "@/components/ui/button";
+import { site } from "@/lib/site";
 
 const links = [
   { href: "#features", key: "features" },
-  { href: "#voices", key: "voices" },
-  { href: "#whisper", key: "whisper" },
-  { href: "#stories", key: "stories" },
+  { href: "#how", key: "how" },
+  { href: "#testimonials", key: "testimonials" },
   { href: "#faq", key: "faq" },
 ] as const;
 
@@ -54,7 +54,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageSelect locale={locale} label={dict.nav.language} />
-          <ButtonLink href="#download">{dict.nav.download}</ButtonLink>
+          <ButtonLink href={site.store.appStore}>{dict.nav.download}</ButtonLink>
         </div>
         <button
           type="button"
@@ -81,7 +81,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </nav>
           <div className="mt-6 flex flex-col gap-3">
             <LanguageSelect locale={locale} label={dict.nav.language} />
-            <ButtonLink href="#download" className="w-full">
+            <ButtonLink href={site.store.appStore} className="w-full">
               {dict.nav.download}
             </ButtonLink>
             <Link href={`/${locale}/privacy`} className="text-sm text-muted" onClick={() => setOpen(false)}>

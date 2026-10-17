@@ -16,6 +16,7 @@ const id: Dictionary = {
     voices: "Suara",
     stories: "Cerita",
     whisper: "Whisper",
+    testimonials: "Testimoni",
     faq: "FAQ",
     download: "Unduh Moonlight",
     privacy: "Kebijakan Privasi",
@@ -27,10 +28,10 @@ const id: Dictionary = {
     skip: "Loncat ke konten",
   },
   hero: {
-    headline: "Impianmu pantas didengar.",
+    headline: "Ruang manifestasi harianmu.",
     support:
-      "Ubah yang kamu inginkan menjadi cerita dan afirmasi personal yang bisa didengarkan setiap hari.",
-    body: "Moonlight mengubah impian, tujuan, dan niatmu menjadi cerita serta afirmasi yang dinarasikan dengan suara yang terasa tepat untukmu.",
+      "Cerita, niat, dan afirmasi dalam satu tempat.",
+    body: "Cerita, niat, dan afirmasi dalam satu tempat — dengar, tulis, dan kembali kapan pun kamu butuh.",
     primary: "Unduh Moonlight",
     secondary: "Lihat cara kerjanya",
     storyTitle: "Digital Fortune Unveiled",
@@ -76,6 +77,12 @@ const id: Dictionary = {
       { title: "Privasi", body: "Dunia batinmu tetap milikmu." },
     ],
   },
+  moments: [
+    { title: "Dengar. Rasakan. Alami.", body: "Masuki realitas yang kamu inginkan dengan audio yang imersif." },
+    { title: "Afirmasi kustom, setiap hari.", body: "Kata yang memperkuat mindset-mu." },
+    { title: "Ucapkan keinginanmu.", body: "Bagikan niatmu dan biarkan mengalir." },
+    { title: "Baca. Rasakan. Jalani.", body: "Cerita yang menghidupkan visimu." },
+  ],
   features: {
     eyebrow: "Fitur",
     headline: "Impianmu. Katamu. Moonlight-mu.",
@@ -247,74 +254,52 @@ const id: Dictionary = {
     ],
   },
   testimonials: {
-    headline: "Cerita yang akan ditulis dengan kata pengguna sendiri.",
-    body: "Ulasan nyata akan muncul di sini. Kami tidak membuat testimoni palsu.",
-    placeholder: "[Testimoni pengguna nyata]",
-    name: "Nama depan",
-    role: "Pengguna Moonlight",
+    headline: "Cerita yang dibuat di Moonlight.",
+    body: "Momen yang ditulis, didengar, dan disimpan di dalam aplikasi.",
+    items: [
+      {
+        quote: "Setiap sudut rumah ini mencerminkan kelimpahan yang sedang kuciptakan.",
+        name: "Amanda",
+        role: "Praktik harian",
+      },
+      {
+        quote: "Aku akhirnya membeli apartemen impian dengan pemandangan laut. Aku hidup dalam kelimpahan.",
+        name: "Cerita Moonlight",
+        role: "Afirmasi",
+      },
+      {
+        quote: "Kunci villa impianku akhirnya di sini. Hidup impianku sedang menjadi nyata.",
+        name: "Cerita Moonlight",
+        role: "Cerita",
+      },
+    ],
   },
   faq: {
     headline: "Pertanyaan, dijawab dengan tenang.",
     items: [
       {
         q: "Apa itu Moonlight?",
-        a: "Moonlight adalah pendamping manifestasi dan wellness yang mengubah impian, tujuan, dan niatmu menjadi cerita serta afirmasi personal yang bisa didengarkan.",
+        a: "Moonlight mengubah impian, tujuan, dan niatmu menjadi cerita serta afirmasi personal yang bisa didengar, ditulis, dan dikunjungi setiap hari.",
       },
       {
-        q: "Bagaimana Moonlight membuat cerita?",
-        a: "Kamu membagikan apa yang sedang kamu panggil ke dalam hidup. Moonlight memakai AI untuk menyusun cerita manifestasi di sekitar detail itu. Hasil AI bisa tidak sempurna, dan kamu bisa kembali, merevisi, atau membuat ulang.",
-      },
-      {
-        q: "Apa itu cerita manifestasi?",
-        a: "Narasi orang pertama yang ditulis di sekitar niatmu — cara mendengar hidup yang sedang kamu tuju, bukan janji bahwa hasil tertentu akan terjadi.",
-      },
-      {
-        q: "Bisakah saya memilih suara narasi?",
-        a: "Ya. Moonlight memiliki beberapa suara narasi agar cerita dan afirmasi terdengar seperti yang kamu inginkan.",
-      },
-      {
-        q: "Apa itu Tresnany?",
-        a: "Tresnany adalah suara narasi unggulan di Moonlight — hangat dan dreamy. Moonlight diciptakan oleh Tresnany Moonlight.",
-      },
-      {
-        q: "Bisakah saya mendengarkan afirmasi?",
-        a: "Ya. Afirmasi bisa diputar sebagai audio dengan pilihan suara dan suara latar.",
-      },
-      {
-        q: "Bisakah saya membuat afirmasi sendiri?",
-        a: "Ya. Kamu bisa membuat afirmasi personal di sekitar area hidup yang paling penting.",
+        q: "Bagaimana cara mengunduh aplikasinya?",
+        a: "Moonlight Manifest tersedia di App Store untuk iPhone. Unduh, buat profil, dan mulai cerita pertamamu.",
       },
       {
         q: "Apa itu Whisper to Moonlight?",
-        a: "Whisper adalah ruang pribadi untuk menulis apa yang sudah kamu manifestasikan, menambahkan foto jika mau, dan menyimpan momen itu di Created by You. Ini bukan feed publik. Kamu yang memutuskan apakah sesuatu dibagikan ke luar aplikasi.",
-      },
-      {
-        q: "Bisakah saya membagikan cerita?",
-        a: "Ya, jika kamu memilih. Kamu bisa membuat kartu visual dari cerita dan afirmasi lalu membagikannya ke Instagram, TikTok, X, atau WhatsApp. Berbagi tidak pernah otomatis.",
-      },
-      {
-        q: "Apakah konten saya pribadi?",
-        a: "Impian, cerita, afirmasi, dan refleksimu diperlakukan sebagai pribadi. Tidak ada feed publik untuk konten privat. Kamu yang memutuskan apa yang keluar dari aplikasi.",
-      },
-      {
-        q: "Bahasa apa yang didukung Moonlight?",
-        a: "Moonlight mendukung English, Rusia, Arab, dan Bahasa Indonesia. Arab ditampilkan dengan tata letak kanan-ke-kiri yang penuh.",
+        a: "Whisper adalah ruang pribadi untuk menulis apa yang sudah kamu manifestasikan, menambahkan foto jika mau, dan menyimpan momen itu. Berbagi tidak pernah otomatis.",
       },
       {
         q: "Apakah Moonlight gratis?",
-        a: "Moonlight menyertakan pengalaman inti, dengan fitur premium melalui langganan. Detail paket ditampilkan di toko aplikasi dan di dalam aplikasi.",
+        a: "Aplikasinya gratis diunduh. Premium membuka pengalaman penuh dengan langganan mingguan, bulanan, atau 3 bulan melalui Apple. Paket mingguan termasuk uji coba 7 hari.",
       },
       {
-        q: "Bagaimana langganan bekerja?",
-        a: "Fitur premium dapat ditawarkan sebagai langganan yang diperpanjang otomatis melalui App Store atau Google Play. Kamu dapat mengelola atau membatalkan langganan di pengaturan akun toko.",
+        q: "Apakah konten saya pribadi?",
+        a: "Impian, cerita, dan refleksimu tetap pribadi. Kamu yang memutuskan apakah sesuatu dibagikan ke luar aplikasi.",
       },
       {
-        q: "Bisakah saya menghapus akun?",
-        a: "Ya. Kamu dapat meminta penghapusan akun dari aplikasi atau dengan menghubungi support@moonlightmanifest.app.",
-      },
-      {
-        q: "Apakah Moonlight pengganti perawatan kesehatan mental profesional?",
-        a: "Tidak. Moonlight adalah pengalaman manifestasi, refleksi, dan hiburan. Ini bukan nasihat medis, psikologis, hukum, finansial, atau profesional lainnya, dan tidak menggantikan perawatan dari profesional yang kompeten.",
+        q: "Apakah ini pengganti perawatan profesional?",
+        a: "Tidak. Moonlight untuk refleksi, inspirasi, dan hiburan. Ini tidak menggantikan perawatan dari profesional yang kompeten.",
       },
     ],
   },
@@ -324,7 +309,7 @@ const id: Dictionary = {
     appStore: "Unduh di App Store",
     googlePlay: "Dapatkan di Google Play",
     qr: "Pindai saat tautan toko sudah aktif",
-    pending: "Tautan toko akan muncul di sini saat Moonlight dipublikasikan.",
+    pending: "Sekarang tersedia di App Store.",
   },
   final: {
     headline: "Hidup yang kamu bayangkan dimulai dari satu pikiran.",

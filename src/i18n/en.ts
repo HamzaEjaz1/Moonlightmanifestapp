@@ -1,9 +1,9 @@
 const en = {
   meta: {
-    title: "Moonlight — Your dreams deserve to be heard",
+    title: "Moonlight — Your daily manifestation space",
     description:
-      "Moonlight turns your dreams, goals, and intentions into personalized manifestation stories and affirmations you can listen to in a voice that feels right for you.",
-    ogTitle: "Moonlight — Give your dreams a voice",
+      "Stories, intentions and affirmations in one place. Listen, write, and return whenever you need them. Download Moonlight Manifest on the App Store.",
+    ogTitle: "Moonlight — Your daily manifestation space",
     keywords:
       "Moonlight manifestation app, manifestation app, manifestation stories, AI manifestation app, affirmation app, personalized affirmations, manifestation audio, daily affirmations, AI affirmation generator, manifestation stories with voice",
   },
@@ -14,6 +14,7 @@ const en = {
     voices: "Voices",
     stories: "Stories",
     whisper: "Whisper",
+    testimonials: "Testimonials",
     faq: "FAQ",
     download: "Download Moonlight",
     privacy: "Privacy Policy",
@@ -25,10 +26,10 @@ const en = {
     skip: "Skip to content",
   },
   hero: {
-    headline: "Your dreams deserve to be heard.",
+    headline: "Your daily manifestation space.",
     support:
-      "Turn what you desire into personalized stories and affirmations you can listen to every day.",
-    body: "Moonlight transforms your dreams, goals, and intentions into immersive stories and affirmations, narrated in a voice that feels right for you.",
+      "Stories, intentions and affirmations in one place.",
+    body: "Stories, intentions and affirmations in one place — listen, write, and return whenever you need them.",
     primary: "Download Moonlight",
     secondary: "Explore how it works",
     storyTitle: "Digital Fortune Unveiled",
@@ -74,6 +75,12 @@ const en = {
       { title: "Privacy", body: "Your inner world stays yours." },
     ],
   },
+  moments: [
+    { title: "Listen. Feel. Experience.", body: "Step into your desired reality with immersive audio." },
+    { title: "Custom affirmations, daily.", body: "Words that strengthen your mindset." },
+    { title: "Speak your desires.", body: "Share your intentions and let them flow." },
+    { title: "Read it. Feel it. Live it.", body: "Stories that bring your vision to life." },
+  ],
   features: {
     eyebrow: "Features",
     headline: "Your dreams. Your words. Your Moonlight.",
@@ -245,74 +252,52 @@ const en = {
     ],
   },
   testimonials: {
-    headline: "Stories people will tell in their own words.",
-    body: "Real reviews will live here when they're ready. We don't invent testimonials.",
-    placeholder: "[Real user testimonial]",
-    name: "First name",
-    role: "Moonlight user",
+    headline: "Stories created in Moonlight.",
+    body: "Moments written, heard, and saved inside the app.",
+    items: [
+      {
+        quote: "Every corner of this home reflects the abundance I've been creating.",
+        name: "Amanda",
+        role: "Daily practice",
+      },
+      {
+        quote: "I finally bought my dream apartment with a breathtaking sea view. I am living in abundance.",
+        name: "Moonlight story",
+        role: "Affirmation",
+      },
+      {
+        quote: "The keys to my dream villa are finally here. My dream life is becoming my reality.",
+        name: "Moonlight story",
+        role: "Story",
+      },
+    ],
   },
   faq: {
     headline: "Questions, answered quietly.",
     items: [
       {
         q: "What is Moonlight?",
-        a: "Moonlight is a manifestation and wellness companion that turns your dreams, goals, and intentions into personalized stories and affirmations you can listen to.",
+        a: "Moonlight turns your dreams, goals, and intentions into personalized stories and affirmations you can listen to, write, and return to each day.",
       },
       {
-        q: "How does Moonlight create stories?",
-        a: "You share what you're calling into your life. Moonlight uses AI to draft a personalized manifestation story around those details. AI outputs can be imperfect, and you can return, revise, or create again.",
-      },
-      {
-        q: "What are manifestation stories?",
-        a: "They are first-person narratives written around your intentions — a way to hear the life you're working toward, not a promise that any outcome will happen.",
-      },
-      {
-        q: "Can I choose the narration voice?",
-        a: "Yes. Moonlight includes multiple narration voices so your stories and affirmations can sound the way you want to hear them.",
-      },
-      {
-        q: "What is Tresnany?",
-        a: "Tresnany is a featured narration voice in Moonlight — a warm, dreamy option for stories and affirmations. Moonlight was created by Tresnany Moonlight.",
-      },
-      {
-        q: "Can I listen to affirmations?",
-        a: "Yes. Affirmations can be played as audio with voice selection and background sound.",
-      },
-      {
-        q: "Can I create my own affirmations?",
-        a: "Yes. You can create personalized affirmations around the areas of life that matter most to you.",
+        q: "How do I get the app?",
+        a: "Moonlight Manifest is available on the App Store for iPhone. Download it, create your profile, and start your first story.",
       },
       {
         q: "What is Whisper to Moonlight?",
-        a: "Whisper is a private space to write what you've already manifested, optionally add a photo, and keep those moments in Created by You. It is not a public feed. You decide if anything is shared outside the app.",
-      },
-      {
-        q: "Can I share my stories?",
-        a: "Yes, when you choose to. You can create visual cards from stories and affirmations and share them to apps such as Instagram, TikTok, X, or WhatsApp. Sharing is never automatic.",
-      },
-      {
-        q: "Is my content private?",
-        a: "Your dreams, stories, affirmations, and reflections are treated as private. There is no public feed for private content. You decide what, if anything, leaves the app.",
-      },
-      {
-        q: "What languages does Moonlight support?",
-        a: "Moonlight supports English, Russian, Arabic, and Bahasa Indonesia. Arabic is presented with a full right-to-left experience.",
+        a: "Whisper is a private space to write what you've already manifested, optionally add a photo, and keep those moments. Sharing is never automatic.",
       },
       {
         q: "Is Moonlight free?",
-        a: "Moonlight includes core experiences with premium features available through a subscription. Final plan details are shown in the app stores and inside the app.",
+        a: "The app is free to download. Premium unlocks the full experience with weekly, monthly, or 3-month subscriptions through Apple. The weekly plan includes a 7-day free trial.",
       },
       {
-        q: "How do subscriptions work?",
-        a: "Premium features may be offered as auto-renewing subscriptions through the App Store or Google Play. You can manage or cancel a subscription in your store account settings.",
+        q: "Is my content private?",
+        a: "Your dreams, stories, and reflections stay private. You decide if anything is shared outside the app.",
       },
       {
-        q: "Can I delete my account?",
-        a: "Yes. You can request account deletion from the app or by contacting support@moonlightmanifest.app.",
-      },
-      {
-        q: "Is Moonlight a replacement for professional mental-health care?",
-        a: "No. Moonlight is a manifestation, reflection, and entertainment-oriented experience. It is not medical, psychological, legal, financial, or other professional advice, and it does not replace care from a qualified professional.",
+        q: "Is this a replacement for professional care?",
+        a: "No. Moonlight is for reflection, inspiration, and entertainment. It does not replace care from a qualified professional.",
       },
     ],
   },
@@ -322,7 +307,7 @@ const en = {
     appStore: "Download on the App Store",
     googlePlay: "Get it on Google Play",
     qr: "Scan when store links are live",
-    pending: "Store links will appear here when Moonlight is published.",
+    pending: "Now available on the App Store.",
   },
   final: {
     headline: "The life you're imagining starts with a thought.",

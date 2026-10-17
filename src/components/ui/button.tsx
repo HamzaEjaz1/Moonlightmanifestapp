@@ -27,7 +27,7 @@ export function ButtonLink({ href, children, variant = "primary", className = ""
     );
   }
   return (
-    <a href={href} className={cls} rel="noreferrer">
+    <a href={href} className={cls} target="_blank" rel="noreferrer">
       {children}
     </a>
   );

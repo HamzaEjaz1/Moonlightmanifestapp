@@ -5,7 +5,7 @@ export const site = {
   supportEmail: "support@moonlightmanifest.app",
   url: "https://moonlightmanifest.app",
   store: {
-    appStore: "",
+    appStore: "https://apps.apple.com/us/app/moonlight-manifest/id6812325317",
     googlePlay: "",
   },
   social: {
@@ -26,4 +26,9 @@ export const screens = {
   player: "/screens/player.jpg",
   affirmationSolid: "/screens/affirmation-solid.jpg",
   whisper: "/screens/whisper.jpg",
+  promoHome: "/screens/promo-home.jpg",
+  promoListen: "/screens/promo-listen.jpg",
+  promoAffirmation: "/screens/promo-affirmation.jpg",
+  promoWhisper: "/screens/promo-whisper.jpg",
+  promoRead: "/screens/promo-read.jpg",
 } as const;

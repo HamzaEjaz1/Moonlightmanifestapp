@@ -20,10 +20,10 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <p className="text-xs uppercase tracking-[0.18em] text-muted">Moonlight</p>
           <ul className="mt-4 space-y-2 text-sm text-ink">
             <li><a href="#features">{dict.nav.features}</a></li>
-            <li><a href="#voices">{dict.nav.voices}</a></li>
-            <li><a href="#whisper">{dict.nav.whisper}</a></li>
-            <li><a href="#stories">{dict.nav.stories}</a></li>
+            <li><a href="#how">{dict.nav.how}</a></li>
+            <li><a href="#testimonials">{dict.nav.testimonials}</a></li>
             <li><a href="#faq">{dict.nav.faq}</a></li>
+            <li><a href="#download">{dict.nav.download}</a></li>
           </ul>
         </div>
         <div>
