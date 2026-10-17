@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope, Noto_Naskh_Arabic } from "next/font/google";
+import { site } from "@/lib/site";
 import "./globals.css";
 
 const serif = Cormorant_Garamond({
@@ -21,41 +22,83 @@ const arabic = Noto_Naskh_Arabic({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#07040f",
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "dark",
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moonlightmanifest.app"),
+  metadataBase: new URL(site.url),
   title: {
-    default: "Moonlight — Your dreams deserve to be heard",
+    default: "Moonlight Manifest — Your daily manifestation space",
     template: "%s · Moonlight",
   },
   description:
-    "Moonlight turns your dreams into personalized manifestation stories and affirmations you can listen to.",
-  applicationName: "Moonlight",
+    "Stories, intentions and affirmations in one place. Listen, write, and return whenever you need them. Download Moonlight Manifest on the App Store.",
+  applicationName: "Moonlight Manifest",
+  authors: [{ name: site.company }],
+  creator: site.company,
+  publisher: site.company,
+  category: "Lifestyle",
   keywords: [
+    "Moonlight Manifest",
     "Moonlight manifestation app",
     "manifestation app",
     "manifestation stories",
-    "AI manifestation app",
-    "affirmation app",
-    "personalized affirmations",
-    "manifestation audio",
     "daily affirmations",
+    "affirmation app",
+    "Whisper to Moonlight",
+    "App Store",
   ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
+  alternates: {
+    canonical: "/en",
+    languages: {
+      en: "/en",
+      ru: "/ru",
+      ar: "/ar",
+      id: "/id",
+      "x-default": "/en",
+    },
+  },
   openGraph: {
     type: "website",
-    siteName: "Moonlight",
-    title: "Moonlight — Give your dreams a voice",
+    siteName: "Moonlight Manifest",
+    title: "Moonlight Manifest — Your daily manifestation space",
     description:
-      "Personalized manifestation stories and affirmations, narrated in a voice that feels right for you.",
+      "Stories, intentions and affirmations in one place. Now on the App Store.",
+    url: site.url,
+    locale: "en_US",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Moonlight Manifest" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Moonlight — Give your dreams a voice",
+    title: "Moonlight Manifest — Your daily manifestation space",
     description:
-      "Personalized manifestation stories and affirmations, narrated in a voice that feels right for you.",
+      "Stories, intentions and affirmations in one place. Now on the App Store.",
+    images: ["/twitter-image"],
+  },
+  appleWebApp: {
+    capable: true,
+    title: "Moonlight",
+    statusBarStyle: "black-translucent",
   },
   icons: {
-    icon: [{ url: "/icon", type: "image/png" }],
-    apple: [{ url: "/apple-icon", type: "image/png" }],
+    icon: [
+      { url: "/icon", type: "image/png", sizes: "32x32" },
+      { url: "/apple-icon", type: "image/png", sizes: "180x180" },
+    ],
+    apple: [{ url: "/apple-icon", type: "image/png", sizes: "180x180" }],
+    shortcut: ["/icon"],
+  },
+  other: {
+    "mobile-web-app-capable": "yes",
   },
 };
 

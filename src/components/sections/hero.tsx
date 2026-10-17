@@ -12,7 +12,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
 
   return (
     <section className="relative overflow-hidden px-5 pb-16 pt-12 sm:pt-16">
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
         <div>
           <motion.p
             initial={reduce ? false : { opacity: 0, y: 10 }}
@@ -32,15 +32,38 @@ export function Hero({ dict }: { dict: Dictionary }) {
           <motion.p
             initial={reduce ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.16, duration: 0.7 }}
-            className="mt-5 max-w-lg text-base leading-7 text-muted sm:text-lg"
+            transition={{ delay: 0.14, duration: 0.7 }}
+            className="mt-4 max-w-lg text-lg leading-7 text-lavender/90"
+          >
+            {dict.hero.support}
+          </motion.p>
+          <motion.p
+            initial={reduce ? false : { opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.18, duration: 0.7 }}
+            className="mt-4 max-w-lg text-base leading-7 text-muted"
           >
             {dict.hero.body}
           </motion.p>
+          <motion.ul
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.22 }}
+            className="mt-6 flex flex-wrap gap-2"
+          >
+            {dict.hero.pills.map((pill) => (
+              <li
+                key={pill}
+                className="rounded-full border border-white/12 bg-white/[0.04] px-3.5 py-1.5 text-xs tracking-wide text-ink"
+              >
+                {pill}
+              </li>
+            ))}
+          </motion.ul>
           <motion.div
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.24 }}
+            transition={{ delay: 0.26 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
             <StoreBadges appStore={dict.download.appStore} googlePlay={dict.download.googlePlay} />
@@ -50,11 +73,11 @@ export function Hero({ dict }: { dict: Dictionary }) {
           </motion.div>
         </div>
         <motion.div
-          className="mx-auto w-full max-w-[380px]"
+          className="mx-auto w-full"
           animate={reduce ? undefined : { y: [0, -10, 0] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
         >
-          <PromoShot src={screens.promoHome} alt={dict.hero.headline} priority />
+          <PromoShot src={screens.promoHome} alt={dict.hero.headline} size="lg" priority />
         </motion.div>
       </div>
     </section>

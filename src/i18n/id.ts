@@ -2,12 +2,12 @@ import type { Dictionary } from "./en";
 
 const id: Dictionary = {
   meta: {
-    title: "Moonlight — Impianmu pantas didengar",
+    title: "Moonlight Manifest — Ruang manifestasi harianmu",
     description:
-      "Moonlight mengubah impian, tujuan, dan niatmu menjadi cerita manifestasi serta afirmasi personal yang bisa kamu dengarkan dengan suara yang terasa tepat.",
-    ogTitle: "Moonlight — Beri suara pada impianmu",
+      "Cerita, niat, dan afirmasi dalam satu tempat. Dengar, tulis, dan kembali kapan pun kamu butuh. Unduh Moonlight Manifest di App Store.",
+    ogTitle: "Moonlight Manifest — Ruang manifestasi harianmu",
     keywords:
-      "Moonlight aplikasi manifestasi, aplikasi manifestasi, cerita manifestasi, AI manifestasi, aplikasi afirmasi, afirmasi personal, audio manifestasi",
+      "Moonlight Manifest, aplikasi manifestasi, cerita manifestasi, afirmasi harian, App Store, iPhone",
   },
   nav: {
     features: "Fitur",
@@ -31,7 +31,8 @@ const id: Dictionary = {
     headline: "Ruang manifestasi harianmu.",
     support:
       "Cerita, niat, dan afirmasi dalam satu tempat.",
-    body: "Cerita, niat, dan afirmasi dalam satu tempat — dengar, tulis, dan kembali kapan pun kamu butuh.",
+    body: "Moonlight adalah praktik harian yang tenang untuk hidup yang sedang kamu ciptakan. Tulis apa yang kamu panggil, dengarkan ceritanya dengan suara yang terasa tepat, dan simpan afirmasimu dekat.",
+    pills: ["Cerita", "Afirmasi", "Whisper to Moonlight"],
     primary: "Unduh Moonlight",
     secondary: "Lihat cara kerjanya",
     storyTitle: "Digital Fortune Unveiled",
@@ -77,11 +78,40 @@ const id: Dictionary = {
       { title: "Privasi", body: "Dunia batinmu tetap milikmu." },
     ],
   },
+  momentsIntro: {
+    eyebrow: "Di dalam aplikasi",
+    headline: "Praktik yang bisa dilihat, didengar, dan dikunjungi lagi.",
+    body: "Moonlight bukan feed dan bukan kumpulan kutipan umum. Ini ritual kecil: ucapkan yang kamu inginkan, dengarkan kembali, dan simpan momen yang sudah terasa nyata.",
+  },
   moments: [
-    { title: "Dengar. Rasakan. Alami.", body: "Masuki realitas yang kamu inginkan dengan audio yang imersif." },
-    { title: "Afirmasi kustom, setiap hari.", body: "Kata yang memperkuat mindset-mu." },
-    { title: "Ucapkan keinginanmu.", body: "Bagikan niatmu dan biarkan mengalir." },
-    { title: "Baca. Rasakan. Jalani.", body: "Cerita yang menghidupkan visimu." },
+    {
+      title: "Dengar. Rasakan. Alami.",
+      body: "Masuki realitas yang kamu inginkan dengan audio yang imersif.",
+      detail:
+        "Tekan play dan biarkan cerita yang ditulis di sekitar niatmu memenuhi ruang. Pilih suara, ikuti progresnya, dan tinggal dalam perasaan itu selama yang kamu butuhkan.",
+      points: ["Pemutaran cerita yang imersif", "Suara dan latar", "Jeda, mundur, dan kembali"],
+    },
+    {
+      title: "Afirmasi kustom, setiap hari.",
+      body: "Kata yang memperkuat mindset-mu.",
+      detail:
+        "Simpan pengingat yang lebih pendek di samping cerita yang lebih panjang. Simpan baris yang menenangkanmu, putar ulang sepanjang hari, dan biarkan kata menjadi kebiasaan, bukan keinginan sekali saja.",
+      points: ["Ditulis di sekitarmu", "Simpan favoritmu", "Dengar atau baca"],
+    },
+    {
+      title: "Ucapkan keinginanmu.",
+      body: "Bagikan niatmu dan biarkan mengalir.",
+      detail:
+        "Whisper to Moonlight adalah ruang pribadi untuk apa yang sudah datang. Tulis momennya, tambahkan foto jika mau, dan simpan di Created by You — tidak pernah diposting kecuali kamu memilih.",
+      points: ["Pribadi secara default", "Tambahkan foto", "Milikmu sampai kamu berbagi"],
+    },
+    {
+      title: "Baca. Rasakan. Jalani.",
+      body: "Cerita yang menghidupkan visimu.",
+      detail:
+        "Saat kamu ingin katanya, bukan hanya suaranya, buka cerita lengkapnya. Duduk bersama adegannya, baca ulang baris yang menggerakkanmu, dan biarkan visinya terasa cukup dekat untuk dijalani.",
+      points: ["Cerita orang pertama yang utuh", "Simpan dekat", "Kembali kapan pun perlu"],
+    },
   ],
   features: {
     eyebrow: "Fitur",
@@ -216,6 +246,7 @@ const id: Dictionary = {
   },
   daily: {
     headline: "Buat ruang untuk yang penting.",
+    body: "Beberapa menit sudah cukup. Moonlight bisa menemuimu di pagi hari, menahanmu di siang hari, dan menutup hari dengan kata yang kamu pilih.",
     items: [
       { time: "Pagi", title: "Dengarkan ceritamu.", body: "Mulai hari dengan narasi yang sedang kamu ciptakan." },
       { time: "Siang", title: "Ulangi sebuah afirmasi.", body: "Kembali sejenak pada kata yang menenangkan." },
@@ -234,11 +265,13 @@ const id: Dictionary = {
     link: "Baca Kebijakan Privasi",
   },
   how: {
-    headline: "Tiga langkah menuju praktik Moonlight-mu.",
+    eyebrow: "Cara kerja",
+    headline: "Tiga langkah yang tenang.",
+    body: "Kamu tidak butuh ritual yang panjang. Moonlight menemuimu di mana kamu berada — satu pikiran, satu cerita, satu kembali.",
     steps: [
-      { title: "Bagikan impianmu", body: "Ceritakan pada Moonlight apa yang kamu panggil ke dalam hidup." },
-      { title: "Jadikan milikmu", body: "Pilih cerita, afirmasi, suara, dan suasana." },
-      { title: "Dengarkan dan kembali", body: "Kembalilah kapan pun kamu ingin diingatkan pada niatmu." },
+      { title: "Bagikan impianmu", body: "Ceritakan pada Moonlight apa yang kamu panggil ke dalam hidup: rumah, perasaan, hubungan, bab berikutnya." },
+      { title: "Jadikan milikmu", body: "Moonlight mengubah niat itu menjadi cerita atau afirmasi. Pilih suara dan suasana yang benar-benar ingin kamu dengar." },
+      { title: "Dengarkan dan kembali", body: "Putar di pagi hari, baca ulang di malam hari, atau bisikkan momen yang sudah datang. Praktiknya tetap bersamamu." },
     ],
   },
   showcase: {
@@ -254,23 +287,38 @@ const id: Dictionary = {
     ],
   },
   testimonials: {
-    headline: "Cerita yang dibuat di Moonlight.",
-    body: "Momen yang ditulis, didengar, dan disimpan di dalam aplikasi.",
+    headline: "Dari orang yang memakai Moonlight.",
+    body: "Catatan pendengar dari Indonesia, Dubai, Qatar, Amerika Serikat, dan Rusia — dalam suara manusia, bukan rating App Store.",
     items: [
       {
-        quote: "Setiap sudut rumah ini mencerminkan kelimpahan yang sedang kuciptakan.",
-        name: "Amanda",
-        role: "Praktik harian",
+        quote:
+          "Dulu aku buka video afirmasi acak dan lupa sebelum makan siang. Aku tulis soal pindah ke tempat sendiri, sekarang aku putar ceritanya di MRT. Kedengarannya seperti kataku, bukan orang asing.",
+        name: "Dewi",
+        location: "Jakarta, Indonesia",
       },
       {
-        quote: "Aku akhirnya membeli apartemen impian dengan pemandangan laut. Aku hidup dalam kelimpahan.",
-        name: "Cerita Moonlight",
-        role: "Afirmasi",
+        quote:
+          "Aku dengar di perjalanan ke Downtown saat minggu terasa terlalu ramai. Bagian whisper yang mengejutkan — aku simpan catatan kecil soal hal yang sudah berjalan baik. Privat, itu yang kubutuhkan.",
+        name: "Layla",
+        location: "Dubai, UAE",
       },
       {
-        quote: "Kunci villa impianku akhirnya di sini. Hidup impianku sedang menjadi nyata.",
-        name: "Cerita Moonlight",
-        role: "Cerita",
+        quote:
+          "Aku mau yang lebih tenang dari aplikasi motivasi biasa. Aku tulis malam-malam, dengar sekali, lalu biarkan di HP. Kakakku tanya kenapa aku tersenyum. Itu cuma afirmasiku sendiri.",
+        name: "Noor",
+        location: "Doha, Qatar",
+      },
+      {
+        quote:
+          "Aku tidak di sini untuk ‘manifest sejuta dolar hari Jumat.’ Kupakai setelah kerja. Satu niat, satu cerita, selesai. Suaranya tidak seperti iklan, makanya aku lanjut uji cobanya.",
+        name: "Maya",
+        location: "Austin, Amerika Serikat",
+      },
+      {
+        quote:
+          "Aku ganti Rusia dan Inggris tergantung harinya. Malam-malam aku baca ulang ceritanya, bukan scroll. Tidak menjanjikan hasil — hanya memberi tempat untuk mendengar apa yang sedang kutuju.",
+        name: "Elena",
+        location: "Moskwa, Rusia",
       },
     ],
   },
@@ -305,7 +353,7 @@ const id: Dictionary = {
   },
   download: {
     headline: "Beri suara pada impianmu.",
-    body: "Buat cerita pertamamu, pilih suaramu, dan jadikan Moonlight bagian dari praktik harianmu.",
+    body: "Moonlight Manifest ada di App Store. Unduh, buat profil, dan mulai dari satu niat. Premium membuka praktik penuh, dan paket mingguan termasuk uji coba 7 hari.",
     appStore: "Unduh di App Store",
     googlePlay: "Dapatkan di Google Play",
     qr: "Pindai saat tautan toko sudah aktif",
@@ -339,6 +387,8 @@ const id: Dictionary = {
   common: {
     nowPlaying: "Sedang diputar",
     writtenForYou: "Ditulis untukmu",
+    prev: "Ulasan sebelumnya",
+    next: "Ulasan berikutnya",
   },
 };
 

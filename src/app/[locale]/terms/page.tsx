@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getTerms } from "@/content/legal";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/config";
+import { localeLanguages } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -13,7 +14,14 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
-  return { title: dict.legal.termsTitle, description: dict.footer.safety };
+  return {
+    title: dict.legal.termsTitle,
+    description: dict.footer.safety,
+    alternates: {
+      canonical: `/${locale}/terms`,
+      languages: { ...localeLanguages("/terms"), "x-default": "/en/terms" },
+    },
+  };
 }
 
 export default async function TermsPage({

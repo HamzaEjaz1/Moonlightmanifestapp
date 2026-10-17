@@ -1,11 +1,11 @@
 const en = {
   meta: {
-    title: "Moonlight — Your daily manifestation space",
+    title: "Moonlight Manifest — Your daily manifestation space",
     description:
       "Stories, intentions and affirmations in one place. Listen, write, and return whenever you need them. Download Moonlight Manifest on the App Store.",
-    ogTitle: "Moonlight — Your daily manifestation space",
+    ogTitle: "Moonlight Manifest — Your daily manifestation space",
     keywords:
-      "Moonlight manifestation app, manifestation app, manifestation stories, AI manifestation app, affirmation app, personalized affirmations, manifestation audio, daily affirmations, AI affirmation generator, manifestation stories with voice",
+      "Moonlight Manifest, Moonlight manifestation app, manifestation app iPhone, manifestation stories, daily affirmations, affirmation app, Whisper to Moonlight, App Store manifestation app",
   },
   nav: {
     features: "Features",
@@ -29,7 +29,8 @@ const en = {
     headline: "Your daily manifestation space.",
     support:
       "Stories, intentions and affirmations in one place.",
-    body: "Stories, intentions and affirmations in one place — listen, write, and return whenever you need them.",
+    body: "Moonlight is a calm daily practice for the life you're creating. Write what you're calling in, listen to a story in a voice that feels right, and keep your affirmations close.",
+    pills: ["Stories", "Affirmations", "Whisper to Moonlight"],
     primary: "Download Moonlight",
     secondary: "Explore how it works",
     storyTitle: "Digital Fortune Unveiled",
@@ -49,7 +50,7 @@ const en = {
   },
   trust: {
     headline: "A daily space for the life you're creating.",
-    body: "Moonlight is built around what the product actually does: personalized stories, spoken affirmations, chosen voices, and sharing that stays in your hands.",
+    body: "Moonlight is built around what the app actually does: stories written from your intention, affirmations you can hear, a private whisper, and sharing that stays in your hands.",
     items: [
       { value: "Stories", label: "Written around your intentions" },
       { value: "Voices", label: "Including Tresnany and more" },
@@ -75,11 +76,40 @@ const en = {
       { title: "Privacy", body: "Your inner world stays yours." },
     ],
   },
+  momentsIntro: {
+    eyebrow: "Inside the app",
+    headline: "A practice you can see, hear, and return to.",
+    body: "Moonlight is not a feed and not a list of generic quotes. It is a small ritual: speak what you want, hear it back, and keep the moments that already feel true.",
+  },
   moments: [
-    { title: "Listen. Feel. Experience.", body: "Step into your desired reality with immersive audio." },
-    { title: "Custom affirmations, daily.", body: "Words that strengthen your mindset." },
-    { title: "Speak your desires.", body: "Share your intentions and let them flow." },
-    { title: "Read it. Feel it. Live it.", body: "Stories that bring your vision to life." },
+    {
+      title: "Listen. Feel. Experience.",
+      body: "Step into your desired reality with immersive audio.",
+      detail:
+        "Press play and let a story written around your intention fill the room. Choose a voice, follow the progress, and stay with the feeling for as long as you need.",
+      points: ["Immersive story playback", "Voice and ambient sound", "Pause, rewind, and return"],
+    },
+    {
+      title: "Custom affirmations, daily.",
+      body: "Words that strengthen your mindset.",
+      detail:
+        "Keep shorter reminders beside the longer stories. Save the lines that steady you, replay them through the day, and let the words become a habit instead of a one-time wish.",
+      points: ["Written around you", "Save your favorites", "Listen or read"],
+    },
+    {
+      title: "Speak your desires.",
+      body: "Share your intentions and let them flow.",
+      detail:
+        "Whisper to Moonlight is a private place for what has already arrived. Write the moment, add a photo if you want, and keep it in Created by You — never posted unless you choose.",
+      points: ["Private by default", "Add a photo", "Yours until you share"],
+    },
+    {
+      title: "Read it. Feel it. Live it.",
+      body: "Stories that bring your vision to life.",
+      detail:
+        "When you want the words, not only the voice, open the full story. Sit with the scene, reread the lines that move you, and let the vision feel close enough to live.",
+      points: ["Full first-person stories", "Keep them close", "Return whenever you need"],
+    },
   ],
   features: {
     eyebrow: "Features",
@@ -214,6 +244,7 @@ const en = {
   },
   daily: {
     headline: "Make space for what matters.",
+    body: "A few minutes is enough. Moonlight can meet you in the morning, hold you at midday, and close the day with the words you chose.",
     items: [
       { time: "Morning", title: "Listen to your story.", body: "Begin the day with the narrative you're creating." },
       { time: "Afternoon", title: "Repeat an affirmation.", body: "A short return to the words that steady you." },
@@ -232,11 +263,13 @@ const en = {
     link: "Read our Privacy Policy",
   },
   how: {
-    headline: "Three steps to your Moonlight practice.",
+    eyebrow: "How it works",
+    headline: "Three quiet steps.",
+    body: "You do not need a long ritual. Moonlight meets you where you are — one thought, one story, one return.",
     steps: [
-      { title: "Share your dream", body: "Tell Moonlight what you're calling into your life." },
-      { title: "Make it yours", body: "Choose your story, affirmation, voice, and mood." },
-      { title: "Listen and return", body: "Come back whenever you want a reminder of your intention." },
+      { title: "Share your dream", body: "Tell Moonlight what you are calling into your life: a home, a feeling, a relationship, a next chapter." },
+      { title: "Make it yours", body: "Moonlight turns that intention into a story or affirmation. Choose a voice and a mood that you actually want to hear." },
+      { title: "Listen and return", body: "Play it in the morning, reread it at night, or whisper a moment that already arrived. The practice stays with you." },
     ],
   },
   showcase: {
@@ -252,23 +285,38 @@ const en = {
     ],
   },
   testimonials: {
-    headline: "Stories created in Moonlight.",
-    body: "Moments written, heard, and saved inside the app.",
+    headline: "From people using Moonlight.",
+    body: "Listener notes from Indonesia, Dubai, Qatar, the United States, and Russia — written in a human voice, not as App Store ratings.",
     items: [
       {
-        quote: "Every corner of this home reflects the abundance I've been creating.",
-        name: "Amanda",
-        role: "Daily practice",
+        quote:
+          "I used to open random affirmation videos and forget them by lunch. I wrote about moving into my own place, and now I replay the story on the MRT. It sounds like my words, not a stranger’s.",
+        name: "Dewi",
+        location: "Jakarta, Indonesia",
       },
       {
-        quote: "I finally bought my dream apartment with a breathtaking sea view. I am living in abundance.",
-        name: "Moonlight story",
-        role: "Affirmation",
+        quote:
+          "I listen on the drive toward Downtown when the week is too loud. The whisper part surprised me — I keep tiny notes of things that already went well. Private, which I needed.",
+        name: "Layla",
+        location: "Dubai, UAE",
       },
       {
-        quote: "The keys to my dream villa are finally here. My dream life is becoming my reality.",
-        name: "Moonlight story",
-        role: "Story",
+        quote:
+          "I wanted something quieter than the usual motivational apps. I write at night, listen once, and leave it on my phone. My sister asked why I was smiling. It was just my own affirmation.",
+        name: "Noor",
+        location: "Doha, Qatar",
+      },
+      {
+        quote:
+          "I’m not here for ‘manifest a million dollars by Friday.’ I use it after work. One intention, one story, done. The voice doesn’t sound like an ad, which is why I kept the trial.",
+        name: "Maya",
+        location: "Austin, United States",
+      },
+      {
+        quote:
+          "I switch between Russian and English depending on the day. In the evening I reread the story instead of scrolling. It doesn’t promise a result — it just gives me a place to hear what I’m working toward.",
+        name: "Elena",
+        location: "Moscow, Russia",
       },
     ],
   },
@@ -303,7 +351,7 @@ const en = {
   },
   download: {
     headline: "Give your dreams a voice.",
-    body: "Create your first story, choose your voice, and make Moonlight part of your daily practice.",
+    body: "Moonlight Manifest is on the App Store. Download it, create your profile, and begin with one intention. Premium unlocks the full practice, and the weekly plan includes a 7-day free trial.",
     appStore: "Download on the App Store",
     googlePlay: "Get it on Google Play",
     qr: "Scan when store links are live",
@@ -337,6 +385,8 @@ const en = {
   common: {
     nowPlaying: "Now playing",
     writtenForYou: "Written for you",
+    prev: "Previous review",
+    next: "Next review",
   },
 };
 

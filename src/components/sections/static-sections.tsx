@@ -91,7 +91,7 @@ export function Daily({ dict }: { dict: Dictionary }) {
   return (
     <section className="px-5 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionHeading title={dict.daily.headline} />
+        <SectionHeading title={dict.daily.headline} body={dict.daily.body} />
         <ol className="relative mt-14 grid gap-6 md:grid-cols-3">
           <span className="pointer-events-none absolute start-[8%] top-8 hidden h-px w-[84%] bg-white/10 md:block" />
           {dict.daily.items.map((item) => (
@@ -134,13 +134,13 @@ export function HowItWorks({ dict }: { dict: Dictionary }) {
   return (
     <section id="how" className="px-5 py-20">
       <div className="mx-auto max-w-5xl">
-        <SectionHeading title={dict.how.headline} />
+        <SectionHeading eyebrow={dict.how.eyebrow} title={dict.how.headline} body={dict.how.body} />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {dict.how.steps.map((step, i) => (
             <article key={step.title} className="rounded-3xl border border-white/8 bg-white/[0.03] p-6">
               <p className="text-xs uppercase tracking-[0.2em] text-lavender">0{i + 1}</p>
               <h3 className="mt-3 font-serif text-2xl text-ink">{step.title}</h3>
-              <p className="mt-2 text-sm text-muted">{step.body}</p>
+              <p className="mt-3 text-sm leading-6 text-muted">{step.body}</p>
             </article>
           ))}
         </div>
@@ -183,13 +183,24 @@ export function Testimonials({ dict }: { dict: Dictionary }) {
     <section id="testimonials" className="px-5 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionHeading title={dict.testimonials.headline} body={dict.testimonials.body} />
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
+        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {dict.testimonials.items.map((item) => (
-            <blockquote key={item.quote} className="rounded-3xl border border-white/8 bg-white/[0.04] p-6">
-              <p className="font-serif text-xl leading-snug text-ink">{item.quote}</p>
-              <footer className="mt-6 text-sm">
-                <p className="text-ink">{item.name}</p>
-                <p className="text-muted">{item.role}</p>
+            <blockquote
+              key={`${item.name}-${item.location}`}
+              className="flex flex-col rounded-3xl border border-white/8 bg-white/[0.04] p-6"
+            >
+              <p className="text-[0.95rem] leading-7 text-ink/95">“{item.quote}”</p>
+              <footer className="mt-auto flex items-center gap-3 pt-6">
+                <span
+                  className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-lavender/15 text-sm font-medium text-lavender"
+                  aria-hidden
+                >
+                  {item.name.slice(0, 1)}
+                </span>
+                <div className="min-w-0 text-sm">
+                  <p className="text-ink">{item.name}</p>
+                  <p className="text-muted">{item.location}</p>
+                </div>
               </footer>
             </blockquote>
           ))}
@@ -204,7 +215,8 @@ export function Download({ dict }: { dict: Dictionary }) {
     <section id="download" className="px-5 py-20">
       <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/8 bg-white/[0.03] px-6 py-16 text-center sm:px-12">
         <h2 className="font-serif text-4xl text-ink sm:text-5xl">{dict.download.headline}</h2>
-        <p className="mx-auto mt-5 max-w-xl text-muted">{dict.download.body}</p>
+        <p className="mx-auto mt-5 max-w-xl leading-7 text-muted">{dict.download.body}</p>
+        <p className="mx-auto mt-3 max-w-lg text-sm text-lavender/80">{dict.download.pending}</p>
         <div className="mt-8 flex justify-center">
           <StoreBadges appStore={dict.download.appStore} googlePlay={dict.download.googlePlay} />
         </div>

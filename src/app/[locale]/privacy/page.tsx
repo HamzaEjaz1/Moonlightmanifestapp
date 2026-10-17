@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getPrivacy } from "@/content/legal";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, type Locale } from "@/i18n/config";
+import { localeLanguages } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -13,7 +14,14 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
-  return { title: dict.legal.privacyTitle, description: dict.privacy.body };
+  return {
+    title: dict.legal.privacyTitle,
+    description: dict.privacy.body,
+    alternates: {
+      canonical: `/${locale}/privacy`,
+      languages: { ...localeLanguages("/privacy"), "x-default": "/en/privacy" },
+    },
+  };
 }
 
 export default async function PrivacyPage({

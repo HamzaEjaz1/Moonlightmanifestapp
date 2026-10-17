@@ -5,6 +5,8 @@ import { Footer } from "@/components/layout/footer";
 import { AmbientField } from "@/components/motion/ambient-field";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isLocale, localeMeta, locales, type Locale } from "@/i18n/config";
+import { languageAlternates } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -18,23 +20,29 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
+  const path = `/${locale}`;
   return {
     title: { absolute: dict.meta.title },
     description: dict.meta.description,
     keywords: dict.meta.keywords.split(", "),
     alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        en: "/en",
-        ru: "/ru",
-        ar: "/ar",
-        id: "/id",
-      },
+      canonical: path,
+      languages: languageAlternates,
     },
     openGraph: {
       title: dict.meta.ogTitle,
       description: dict.meta.description,
-      locale,
+      locale: localeMeta[locale].htmlLang,
+      url: `${site.url}${path}`,
+      siteName: "Moonlight Manifest",
+      type: "website",
+      images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: dict.meta.ogTitle }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.ogTitle,
+      description: dict.meta.description,
+      images: ["/twitter-image"],
     },
   };
 }
