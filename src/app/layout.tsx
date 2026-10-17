@@ -1,17 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope, Noto_Naskh_Arabic } from "next/font/google";
+import { Poppins, Noto_Naskh_Arabic } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const serif = Cormorant_Garamond({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600"],
-  variable: "--font-serif",
-  display: "swap",
-});
-
-const sans = Manrope({
-  subsets: ["latin", "cyrillic", "latin-ext"],
+const poppins = Poppins({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -107,10 +101,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       dir="ltr"
-      className={`${serif.variable} ${sans.variable} ${arabic.variable} h-full antialiased`}
+      className={`${poppins.variable} ${arabic.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="grain min-h-full text-ink">{children}</body>
+      <body className="grain min-h-full font-sans text-ink">{children}</body>
     </html>
   );
 }

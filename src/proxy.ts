@@ -2,16 +2,19 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { defaultLocale, isLocale } from "@/i18n/config";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   if (
     pathname.startsWith("/screens") ||
+    pathname.startsWith("/reviews") ||
     pathname.startsWith("/icon") ||
     pathname.startsWith("/apple-icon") ||
     pathname.startsWith("/opengraph-image") ||
     pathname.startsWith("/twitter-image") ||
     pathname.startsWith("/manifest") ||
-    pathname.startsWith("/brand")
+    pathname.startsWith("/brand") ||
+    pathname.startsWith("/robots") ||
+    pathname.startsWith("/sitemap")
   ) {
     return NextResponse.next();
   }
